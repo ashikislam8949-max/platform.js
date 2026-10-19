@@ -44,6 +44,12 @@ npx @cursor/bdk serve --dir . --dev
 
 Invite the bot, then DM or `@mention` it with a UA or platform.js question.
 
+## Grok Bot section
+
+Extension: `bot/extensions/grokbot.ts` → tools `grokbot__list` / `ask` /
+`check` / `interrupt`. Edit the `agents` allowlist to match bots on the
+serve host Cursor account. Smoke eval: `evals/grokbot-agents.eval.ts`.
+
 ## Do not
 
 - Grow host TypeScript for formatting, classification, or reply composition.

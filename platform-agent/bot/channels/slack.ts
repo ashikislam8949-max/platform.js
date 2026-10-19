@@ -23,5 +23,14 @@ export default slackChannel({
       message:
         "Which browser is this really?\nMozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52",
     },
+    {
+      title: "Grok Bot list",
+      message: "Who can you talk to? List the Grok Bot agents. Do not message anyone.",
+    },
+    {
+      title: "Ask Platform Expert",
+      message:
+        "Ask Platform Expert: for a spoofed Opera-as-Firefox UA, should we trust platform.js name or the Firefox token? One clear recommendation.",
+    },
   ],
 });

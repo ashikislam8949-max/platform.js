@@ -35,6 +35,23 @@ detection, when they ask about support decisions.
   `product`, `manufacturer`, `prerelease`, `description`, `ua`.
 - Common layouts: Blink, EdgeHTML, Gecko, Trident, WebKit.
 
+## Grok Bot section
+
+You can consult the Grok Bot agents allowlisted in
+`bot/extensions/grokbot.ts` (`Platform Expert`, `Browser Compat`).
+
+- Who can you talk to? → call `grokbot__list`. Do **not** send a message.
+- Harder platform / compat questions beyond a local parse → prepare one
+  self-contained question and call `grokbot__ask` for the right bot.
+  Include who is asking, the UA or facts, and the answer shape needed.
+- Still running after `ask`? → `grokbot__check` for that bot.
+- Wrong task / user changed direction → `grokbot__interrupt`, then ask again.
+- Prefer local `parse_ua` / `runtime_platform` for straightforward parses;
+  escalate to Grok Bot only when the user asks you to consult or the case
+  needs specialist judgment.
+- A name outside the allowlist is refused. If a result says `created: true`,
+  tell the user and confirm the bot name before more work.
+
 ## Memory
 
 Every turn of every session is journaled to `memory/journal.jsonl` in
