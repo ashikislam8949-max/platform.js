@@ -28,9 +28,9 @@ export default slackChannel({
       message: "Who can you talk to? List the Grok Bot agents. Do not message anyone.",
     },
     {
-      title: "Ask Platform Expert",
+      title: "Ask Grok",
       message:
-        "Ask Platform Expert: for a spoofed Opera-as-Firefox UA, should we trust platform.js name or the Firefox token? One clear recommendation.",
+        "Ask Grok: for a spoofed Opera-as-Firefox UA, should we trust platform.js name or the Firefox token? One clear recommendation.",
     },
   ],
 });

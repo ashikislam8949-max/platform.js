@@ -1,12 +1,16 @@
 import cursorGrokBotAgents from "@cursor/bdk/extensions/cursor-grokbot-agents";
 
 /**
- * Allowlist of Grok Bot agents this BDK agent may consult.
- * Names must match bots on the serve host's Cursor / Grok Bot account.
- * Edit this list to match your workspace bots.
+ * Grok Bot agents this BDK agent may consult.
+ * Primary bot is "Grok". Extra names must match bots on the serve host account.
  */
 export default cursorGrokBotAgents({
   agents: [
+    {
+      name: "Grok",
+      description:
+        "Default Grok Bot — platform.js questions, UA parsing judgment, and general follow-ups.",
+    },
     {
       name: "Platform Expert",
       description:
