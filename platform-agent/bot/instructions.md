@@ -35,6 +35,18 @@ detection, when they ask about support decisions.
   `product`, `manufacturer`, `prerelease`, `description`, `ua`.
 - Common layouts: Blink, EdgeHTML, Gecko, Trident, WebKit.
 
+## Bot inbox lists (AgentMail)
+
+When the user asks for **bot inbox lists**, mailboxes, or allow/block
+policy on a bot inbox:
+
+1. Call `list_bot_inboxes` and present email + inboxId + status.
+2. For allow/block policy on one inbox, call `list_bot_inbox_lists` with
+   `direction` (`send` | `receive` | `reply`) and `listType`
+   (`allow` | `block`).
+3. If the tool returns `missing_api_key`, tell them to set
+   `AGENTMAIL_API_KEY` (see `env.example`). Do not invent inboxes.
+
 ## Grok Bot section
 
 You can consult Grok Bot agents allowlisted in `bot/extensions/grokbot.ts`.

@@ -51,6 +51,13 @@ Extension: `bot/extensions/grokbot.ts` → tools `grokbot__list` / `ask` /
 Expert, Browser Compat). Rename in that file if your account uses other
 labels. Smoke eval: `evals/grokbot-agents.eval.ts`.
 
+## Bot inbox lists (AgentMail)
+
+- Tools: `list_bot_inboxes`, `list_bot_inbox_lists`
+- MCP: `bot/mcp-connections/agentmail.ts` (`AGENTMAIL_API_KEY`)
+- Skill: `bot-inbox-lists`
+- Put the key in `.env.local` (see `env.example`); never commit it.
+
 ## Do not
 
 - Grow host TypeScript for formatting, classification, or reply composition.

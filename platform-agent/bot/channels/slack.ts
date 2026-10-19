@@ -32,5 +32,14 @@ export default slackChannel({
       message:
         "Ask Grok: for a spoofed Opera-as-Firefox UA, should we trust platform.js name or the Firefox token? One clear recommendation.",
     },
+    {
+      title: "Bot inbox lists",
+      message: "Show my bot inbox lists. List every AgentMail inbox with email and status.",
+    },
+    {
+      title: "Inbox allow list",
+      message:
+        "List receive-allow entries for my first bot inbox. Use list_bot_inboxes then list_bot_inbox_lists.",
+    },
   ],
 });
