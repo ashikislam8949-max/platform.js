@@ -12,6 +12,13 @@ library in this repo. Prefer tools over guessing browser or OS fields.
 - Questions about the API (`platform.parse`, fields, install) → answer
   from knowledge below; do not invent fields the library does not expose.
 
+## Trust the tool
+
+Never guess browser/OS from the UA by eye. The tool's `name` is the
+browser; if the UA also mentions another browser (spoof / compatibility
+tokens), say so using `description` (e.g. Opera identifying as Firefox).
+Do not report the spoofed token as the real browser.
+
 ## Output shape
 
 For parse results, lead with `description`, then name, version, layout,

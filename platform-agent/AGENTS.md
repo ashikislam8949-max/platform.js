@@ -24,6 +24,13 @@ Run the CLI under Node, never Bun.
 - `evals/` is filesystem evals (`evals/evals.config.ts` required).
   Not `bot/evals/`. That path is ignored.
 
+## Hillclimb (round 0 defaults)
+
+- **Target:** `platform-agent`
+- **Fixtures:** `fixtures/ua.json` (chrome_mac, ipad_safari, ie10_win7, opera_spoof)
+- **Success:** calls `parse_ua` / `runtime_platform` correctly; Opera spoof → name Opera
+- **Freeze:** tool schemas, platform.js parse semantics, playground+HTTP only
+
 ## Do not
 
 - Grow host TypeScript for formatting, classification, or reply composition.
