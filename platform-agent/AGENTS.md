@@ -29,7 +29,20 @@ Run the CLI under Node, never Bun.
 - **Target:** `platform-agent`
 - **Fixtures:** `fixtures/ua.json` (chrome_mac, ipad_safari, ie10_win7, opera_spoof)
 - **Success:** calls `parse_ua` / `runtime_platform` correctly; Opera spoof → name Opera
-- **Freeze:** tool schemas, platform.js parse semantics, playground+HTTP only
+- **Freeze:** tool schemas, platform.js parse semantics
+
+## Slack
+
+Channel: `bot/channels/slack.ts` (`PLATFORM_AGENT_SLACK_*`).
+
+```bash
+npx @cursor/bdk login
+npx @cursor/bdk slack create --dir . --name "platform-agent"
+npx @cursor/bdk slack doctor --prefix PLATFORM_AGENT
+npx @cursor/bdk serve --dir . --dev
+```
+
+Invite the bot, then DM or `@mention` it with a UA or platform.js question.
 
 ## Do not
 
