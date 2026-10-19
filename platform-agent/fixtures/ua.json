@@ -1,0 +1,40 @@
+{
+  "chrome_mac": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "expect": {
+      "name": "Chrome",
+      "layout": "Blink",
+      "osFamily": "OS X",
+      "descriptionIncludes": "Chrome 120.0.0.0 on OS X 10.15.7"
+    }
+  },
+  "ipad_safari": {
+    "ua": "Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+    "expect": {
+      "name": "Safari",
+      "product": "iPad",
+      "manufacturer": "Apple",
+      "osFamily": "iOS",
+      "descriptionIncludes": "Safari 5.1 on Apple iPad"
+    }
+  },
+  "ie10_win7": {
+    "ua": "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
+    "expect": {
+      "name": "IE",
+      "layout": "Trident",
+      "osFamily": "Windows Server 2008 R2 / 7",
+      "descriptionIncludes": "IE 10.0"
+    }
+  },
+  "opera_spoof": {
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52",
+    "expect": {
+      "name": "Opera",
+      "layout": "Presto",
+      "osFamily": "OS X",
+      "descriptionIncludes": "Opera 11.52 (identifying as Firefox 4.0)"
+    },
+    "note": "UA mentions Firefox; platform.js correctly reports Opera."
+  }
+}
