@@ -8,4 +8,7 @@ export default defineAgent({
       { id: "fast", value: "true" },
     ],
   },
+  hosting: {
+    egressDomains: ["api.agentmail.to", "mcp.agentmail.to"],
+  },
 });
