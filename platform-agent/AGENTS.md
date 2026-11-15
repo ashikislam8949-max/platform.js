@@ -29,7 +29,34 @@ Run the CLI under Node, never Bun.
 - **Target:** `platform-agent`
 - **Fixtures:** `fixtures/ua.json` (chrome_mac, ipad_safari, ie10_win7, opera_spoof)
 - **Success:** calls `parse_ua` / `runtime_platform` correctly; Opera spoof → name Opera
-- **Freeze:** tool schemas, platform.js parse semantics, playground+HTTP only
+- **Freeze:** tool schemas, platform.js parse semantics
+
+## Slack
+
+Channel: `bot/channels/slack.ts` (`PLATFORM_AGENT_SLACK_*`).
+
+```bash
+npx @cursor/bdk login
+npx @cursor/bdk slack create --dir . --name "platform-agent"
+npx @cursor/bdk slack doctor --prefix PLATFORM_AGENT
+npx @cursor/bdk serve --dir . --dev
+```
+
+Invite the bot, then DM or `@mention` it with a UA or platform.js question.
+
+## Grok Bot section
+
+Extension: `bot/extensions/grokbot.ts` → tools `grokbot__list` / `ask` /
+`check` / `interrupt`. Default allowlisted bot: **Grok** (plus Platform
+Expert, Browser Compat). Rename in that file if your account uses other
+labels. Smoke eval: `evals/grokbot-agents.eval.ts`.
+
+## Bot inbox lists (AgentMail)
+
+- Tools: `list_bot_inboxes`, `list_bot_inbox_lists`
+- MCP: `bot/mcp-connections/agentmail.ts` (`AGENTMAIL_API_KEY`)
+- Skill: `bot-inbox-lists`
+- Put the key in `.env.local` (see `env.example`); never commit it.
 
 ## Do not
 
